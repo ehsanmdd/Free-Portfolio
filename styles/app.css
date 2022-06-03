@@ -1,0 +1,134 @@
+@import "normalize.css";
+@import "grid.css";
+@import "fonts.css";
+
+:root {
+       --primery-color:     #0ABEAD;
+       --second-color:      #F57F17;
+       --text-color:        #333333;
+       --shado-color:       rgba(19,182,255,0.24);
+       --app-bg-color:      #FFFFFF;
+       --section-bg-color:  #FFFFFF;
+}
+
+
+/*
+
+--- Reset Style
+
+ */
+
+ a {
+     text-decoration: none;
+ }
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+/*
+
+--- App
+
+ */
+html {
+    font-size: 10px;
+}
+body {
+    font-family: "Poppins";
+    font-size: 1.6rem;
+    line-height: 1.5rem;
+}
+
+
+/*
+
+- Header App -
+
+ */
+
+.header {
+    background-color: var(--section-bg-color);
+    box-shadow: 0 .5rem 5rem rgba(4, 195, 255, 16%);
+    z-index: 100;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+}
+.nav__logo {
+    color: var(--primery-color);
+    font-family: "Poppins Black";
+    font-size: 5rem;
+    margin: 0;
+}
+.menu {
+    display: flex;
+    /* align-items: center; */
+}
+.menu__item {
+    margin-right: 4rem;
+}
+.menu__item :last-child {
+    margin-right: 0;
+}
+.menu__link {
+    display: inline-block;
+    color: inherit;
+    font-family: "Poppins Medium";
+    transition: color 120ms ease-in;
+
+}
+.menu__link:hover {
+    color: var(--primery-color);
+}
+.nav__toggle-icon {
+    display: none;
+    width: 5rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav__toggle-line {
+    position: relative;
+    transition: all 100ms ease-in;
+}
+.nav__toggle-line,
+.nav__toggle-line::before,
+.nav__toggle-line::after {
+    content: " ";
+    width: 4.5rem;
+    height: 0.4rem;
+    border-radius: 2rem;
+    background-color: var(--primery-color);
+}
+.nav__toggle-line::before {
+    position: absolute;
+    top: 1.2rem;
+    transition: all 120ms ease-in;
+}
+.nav__toggle-line::after {
+    position: absolute;
+    bottom: 1.2rem;
+    transition: all 120ms ease-in;
+}
+
+.nav__toggle-icon--open .nav__toggle-line {
+    background-color: transparent;
+}
+
+.nav__toggle-icon--open .nav__toggle-line::before {
+    transform: translateY(-1.2rem) rotate(-45deg);
+}
+.nav__toggle-icon--open .nav__toggle-line::after {
+    transform: translateY(1.2rem) rotate(45deg);
+}
