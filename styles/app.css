@@ -3,14 +3,89 @@
 @import "fonts.css";
 
 :root {
-       --primery-color:     #0ABEAD;
-       --second-color:      #F57F17;
-       --text-color:        #333333;
-       --shado-color:       rgba(19,182,255,0.24);
-       --app-bg-color:      #FFFFFF;
-       --section-bg-color:  #FFFFFF;
+       --primery-color:                     #0ABEAD;
+       --second-color:                      #f57e17;
+       --text-color:                        #333333;
+       --shadow-color:                      rgba(19,182,255,0.24);
+       --btn-shadow-color-primery:          rgba(10, 189, 171, 0.5);
+       --btn-shadow-color-secondery:        rgb(245, 128, 25, 0.5);
+       --app-bg-color:                      #FFFFFF;
+       --section-bg-color:                  #FFFFFF;
 }
 
+
+/*
+
+--- Component
+
+ */
+
+ .app-btn {
+     width: 16rem;
+     height: 4rem;
+     display: block;
+     border-radius: 2rem;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: var(--primery-color);
+     box-shadow: 0 1rem 2rem var(--btn-shadow-color-primery);
+     font-family: "Poppins SemiBold";
+}
+.app-btn--orange {
+    background-color: var(--second-color);
+    box-shadow: 0 1rem 2rem var(--btn-shadow-color-secondery);
+ }
+
+ .section-head {
+    text-align: center;
+    margin-bottom: 5rem;
+ }
+ .seaction-head-title {
+     font-family: "Poppins Bold";
+     font-size: 4.8rem;
+     padding: 0;
+     margin: 3rem;
+     color: var(--primery-color);
+ }
+ .section-head-caption {
+    color: var(--primery-color);
+    margin: 3rem 0;
+    word-spacing: .2rem;
+    letter-spacing: .5rem;
+ }
+ .section-head-line {
+     margin: 0 auto;
+    display: block;
+    width: 19rem;
+    height: 2px;
+    background-color: var(--primery-color);
+    position: relative;
+ }
+ .section-head-line::after {
+     content: "";
+     position: absolute;
+     width: 3rem;
+     height: 0.8rem;
+     border-radius: 3rem;
+     right: 0;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     margin: auto;
+     background-color: var(--primery-color);
+ }
+
+/*
+
+--- Helper Class
+
+ */
+
+ .align-item-center {
+     align-items: center;
+ }
 
 /*
 
@@ -38,7 +113,10 @@ html {
 body {
     font-family: "Poppins";
     font-size: 1.6rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
+    color: var(--text-color);
+    background-color: var(--app-bg-color);
+    padding-top: 5.1rem;
 }
 
 
@@ -131,4 +209,152 @@ body {
 }
 .nav__toggle-icon--open .nav__toggle-line::after {
     transform: translateY(1.2rem) rotate(45deg);
+}
+
+/*
+
+- Main -
+
+ */
+
+ .main {
+    /* padding-top: 12rem; */
+ }
+
+ /*
+
+- Home -
+
+ */
+
+ .home {
+    margin-top: 12rem;
+    background-image: url(/images/shapes/header-shape.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    height: 79.8rem;
+ }
+.home__name {
+    font-family: "Poppins SemiBold";
+    color: var(--primery-color);
+    font-size: 2.5rem;
+    
+}
+.home__name span {
+    color:var(--second-color);
+}
+.home__title {
+    font-family: "Poppins Bold";
+    color: var(--primery-color);
+    font-size: 5rem;
+    margin: 2rem 0;
+}
+.home__caption {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+.home__links-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.home__photo {
+    width: 55rem;
+    height: 55rem;
+    border: 10px solid white;
+    border-radius: 100%;
+    background-image: url(/images/header-avatar.jpg);
+    background-repeat: no-repeat;
+    background-position: top, center;
+    box-shadow: 0 0 4rem rgba(10, 189, 171, 0.1);
+}
+
+ /*
+
+- About us section -
+
+ */
+
+ .aboutUs {
+     margin-top: 10rem;
+ }
+
+.about {
+    display: flex;
+    background-color: var(--section-bg-color);
+    box-shadow: 0 0 4rem rgba(10, 189, 171, 0.2);
+    
+}
+.about__cover {
+    flex-basis: 50%;
+    flex-shrink: 0;
+}
+.about__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about__content {
+    flex-basis: 50%;
+    flex-shrink: 0;
+    padding: 4rem 4rem;
+}
+.about__title {
+    font-family: "Poppins SemiBold";
+    font-size: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.about__description {
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+.about__list-title {
+    color: var(--primery-color);
+    font-family: "Poppins SemiBold";
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.about-list {
+    margin-bottom: 3rem;
+    margin-left: 1rem;
+}
+.about-list__item {
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2.5rem;
+}
+.about-list__item:last-child {
+    margin-bottom: 0;
+}
+.about-list__item::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1.1rem;
+    height: 1.1rem; 
+    border-radius: 100%;
+    background-color: var(--second-color); 
+}
+.about__links-wrapper {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+
+.services-content {
+    background-color: #8540FF;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 5rem;
+    color: var(--section-bg-color);
 }
