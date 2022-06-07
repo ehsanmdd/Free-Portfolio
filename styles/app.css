@@ -4,7 +4,7 @@
 
 :root {
        --primery-color:                     #0ABEAD;
-       --second-color:                      #f57e17;
+       --second-color:                      rgb(245, 128, 25);
        --text-color:                        #333333;
        --shadow-color:                      rgba(19,182,255,0.24);
        --btn-shadow-color-primery:          rgba(10, 189, 171, 0.5);
@@ -45,8 +45,6 @@
  .seaction-head-title {
      font-family: "Poppins Bold";
      font-size: 4.8rem;
-     padding: 0;
-     margin: 3rem;
      color: var(--primery-color);
  }
  .section-head-caption {
@@ -86,7 +84,12 @@
  .align-item-center {
      align-items: center;
  }
-
+ .skew-reset {
+     transform: skewY(6deg);
+ }
+ .h-full {
+    height: 100%;
+}
 /*
 
 --- Reset Style
@@ -279,7 +282,7 @@ body {
  */
 
  .aboutUs {
-     margin-top: 10rem;
+     margin-top: 15rem;
  }
 
 .about {
@@ -349,12 +352,190 @@ body {
     width: 100%;
 }
 
+ /*
 
-.services-content {
-    background-color: #8540FF;
-    align-items: center;
-    justify-content: center;
+- Services section -
+
+ */
+
+
+.services {
+    margin-top: 15rem;
+}
+.service {
     text-align: center;
-    padding: 6rem 5rem;
+    padding: 6rem 4rem;
     color: var(--section-bg-color);
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+}
+.service-perple {
+    background-color: #8540FF;
+}
+.service-yellow {
+    background-color: #FFC50C;
+}
+.service-pink {
+    background-color: #EC407A;
+}
+.service-orange {
+    background-color: #FF6331;
+}
+.service-blue {
+    background-color: #13B6FF;
+}
+.service-green {
+    background-color: #49AF46;
+}
+.service__title {
+    font-size: 2.4rem;
+    font-family: "Poppins Bold";
+}
+.service__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: -5;
+
+}
+
+ /*
+
+- Resume section -
+
+ */
+
+.resume {
+    margin-top: 20rem;
+    box-shadow: 0 0 4rem rgba(10, 189, 171, 0.2);
+    margin-bottom: 10rem;
+    padding: 8rem 0;
+    transform: skewY(-6deg);
+    background-color: var(--section-bg-color);
+}
+.resume-list {
+    background-color: var(--app-bg-color);
+    box-shadow: 0 0 4rem rgba(10, 189, 171, 0.2);
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 36rem;
+    margin-right: 2rem;
+}
+.resume-list::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    background-color: var(--primery-color);
+    z-index: -1;
+}
+.resume-list__item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    padding: .8rem 0;
+    cursor: pointer;
+}
+.resume-list__item:last-child {
+    margin-bottom: 0;
+}
+.resume-list__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 5.4rem;
+    max-width: 26rem;
+    border-radius: 2rem;
+    background-color: var(--primery-color);
+    z-index: -1;
+    transition: all 0.2s ease-in;
+}
+.resume-list__item--active {
+    color: white;
+}
+.resume-list__item--active::before {
+    width: 100%;
+}
+.resume-list__icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0 .8rem;
+}
+.resume-list__text {
+    font-family: "Poppins Bold";
+    font-size: 1.8rem;
+    margin-left: 2.5rem;
+    transition: all 0.2s ease-in;
+}
+
+
+.resume-content  {
+    padding-top: 2rem;
+    border-left: .2rem solid var(--primery-color);
+    padding-left: 3rem;
+    display: none;
+}
+.resume-content--show {
+    display: block;
+}
+.resume-content__item {
+    margin-bottom: 2rem;
+}
+.resume-content__item:last-child {
+    margin-bottom: 0;
+}
+.resume-content__head {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.resume-content__title {
+    color: var(--second-color);
+    font-family: "Poppins SemiBold";
+    font-size: 1.8rem;
+    margin: 0;
+    position: relative;
+}
+.resume-content__title::before {
+    content: "";
+    position: absolute;
+    left: -4rem;
+    top: 0;
+    bottom: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 100%;
+    background-color: var(--primery-color);
+    margin: 0 auto;
+}
+.resume-content__data {
+    background-color: var(--second-color);
+    color: var(--section-bg-color);
+    padding: .2rem 1.5rem;
+    border-radius: 2rem;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(245, 128, 25, 0.5);
+}
+.resume-content__subtitle {
+    font-family: "Poppins SemiBold";
+    font-size: 1.6rem;
+    margin: 1.5rem 0;
+}
+.resume-content__description {
+    margin: 0;
+    max-width: 75rem;
 }
