@@ -486,10 +486,13 @@ body {
     padding-top: 2rem;
     border-left: .2rem solid var(--primery-color);
     padding-left: 3rem;
-    display: none;
+    height: 0;
+    opacity: 0;
+    transition: all 0.5s ease-out;
 }
 .resume-content--show {
-    display: block;
+    height: auto;
+    opacity: 1;
 }
 .resume-content__item {
     margin-bottom: 2rem;
