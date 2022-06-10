@@ -4,7 +4,7 @@
 
 :root {
        --primery-color:                     #0ABEAD;
-       --second-color:                      rgb(245, 128, 25);
+       --second-color:                      #f58019;
        --text-color:                        #333333;
        --shadow-color:                      rgba(19,182,255,0.24);
        --btn-shadow-color-primery:          rgba(10, 189, 171, 0.5);
@@ -412,7 +412,6 @@ body {
 .resume {
     margin-top: 20rem;
     box-shadow: 0 0 4rem rgba(10, 189, 171, 0.2);
-    margin-bottom: 10rem;
     padding: 8rem 0;
     transform: skewY(-6deg);
     background-color: var(--section-bg-color);
@@ -425,7 +424,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 36rem;
+    min-height: 45rem;
     margin-right: 2rem;
 }
 .resume-list::before {
@@ -464,7 +463,7 @@ body {
     transition: all 0.2s ease-in;
 }
 .resume-list__item--active {
-    color: white;
+    color: black;
 }
 .resume-list__item--active::before {
     width: 100%;
@@ -541,4 +540,64 @@ body {
 .resume-content__description {
     margin: 0;
     max-width: 75rem;
+}
+
+ /*
+
+- Portfolio section -
+
+ */
+
+.portfolio {
+    margin-top: 20rem;
+}
+.porfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.portfolio-list__item {
+    padding: 1rem 1.5rem;
+    
+    cursor: pointer;
+    border-radius: 5rem;
+    transition: all 0.5s ease-out;
+}
+.portfolio-list__item--active {
+    background-color: var(--primery-color);
+    color: white;
+
+
+}
+.portfolio-content {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+}
+.portfolio-content--show {
+    height: auto;
+    opacity: 1;
+}
+.portfolio-content__img {
+    width: 100%;
+}
+.swiper {
+    width: 80%;
+    height: auto;
+  }
+.swiper-pagination {
+    position: static !important; 
+    margin-top: 1rem !important; 
+}
+.swiper-pagination-bullet {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    border: 3px solid #BFBEBE !important;
+    background: transparent !important;
+}
+.swiper-pagination-bullet-active {
+    border-color: var(--primery-color) !important;
 }

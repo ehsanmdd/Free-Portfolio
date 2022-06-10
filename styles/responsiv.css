@@ -20,6 +20,9 @@
     .service {
         padding: 7rem 2rem;
     }
+    .resume-list {
+        margin-right: 0;
+    }
 }
 @media screen and (max-width: 992px) {
     .nav__logo {
@@ -49,7 +52,36 @@
     .about {
         flex-direction: column;
     }
-
+    .resume-list::before,
+    .resume-list__item::before,
+    .resume-content__title {
+        content: none;
+    }
+    .resume-list__icon {
+        display: none;
+    }
+    .resume-list {
+        padding: 1rem 0rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        color: white;
+        justify-content: flex-start;
+        align-items:flex-start;
+        min-height: auto;
+        box-shadow: none;
+        background-color: none;
+    }
+    .resume-list__item {
+        background-color: var(--primery-color);
+        border-radius: 5rem;
+        padding: 1rem 2rem;
+        margin-bottom: 0;
+    }
+    .resume-list__text {
+        font-size: 1.6rem;
+        margin: 0;
+    }
 
 }
 @media screen and (max-width: 768px) {
