@@ -164,6 +164,9 @@
     .about__content {
         padding: 2rem;
     }
+    * {
+        cursor: default !important;
+    }
 }
 @media screen and (max-width: 576px) {
     .home__title {

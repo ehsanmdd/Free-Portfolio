@@ -13,13 +13,31 @@
     --btn-shadow-color-secondery:       rgb(245, 128, 25, 0.5);
     --app-bg-color:                     #FFFFFF;
     --section-bg-color:                 #FFFFFF;
+    transition: color 0.1s ease-in;
 }
 :root.dark-theme {
     --text-color:                       #95A5C6;
     --app-bg-color:                     #161D26;
     --section-bg-color:                 #1F2935;
+    transition: color 0.1s ease-in;
+}
+:root.dark-theme .header, 
+:root.dark-theme .home__photo,
+:root.dark-theme .about, 
+:root.dark-theme .resume,
+:root.dark-theme .resume-list,
+:root.dark-theme .pricing,
+:root.dark-theme .package {
+    box-shadow: none;
 }
 
+:root.dark-theme .home {
+    background-image: url(/images/shapes/header-shape-dark.svg);
+}
+
+:root.dark-theme .footer__social {
+    background-color: var(--section-bg-color);
+}
 
  /*
 
@@ -82,7 +100,7 @@ ul {
 }
 
 .section-head-caption {
-    color: black;
+    color: var(--text-color);
     margin: 3rem 0;
     letter-spacing: .25rem;
 }
@@ -538,6 +556,7 @@ body {
     background-color: var(--primery-color);
     z-index: -1;
     transition: all .2s ease-in;
+    box-shadow: 0 0 4rem rgba(96, 233, 255, 27%);
 }
 
 .resume-list__item--active {
@@ -739,6 +758,7 @@ body {
 }
 .package__body {
     padding: 3rem 0;
+    background-color: var(--app-bg-color);
 }
 .package-options {
     width: 18rem;
@@ -827,6 +847,7 @@ body {
     padding: 1.5rem 2.5rem;
     border-radius: 1rem;
     color: var(--text-color);
+    background-color: var(--app-bg-color);
 }
 .contact__input::placeholder {
     color: var(--text-color);
@@ -873,11 +894,12 @@ body {
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
-    background-color: var(--app-color-dark);
+    background-color:var(--app-color-dark);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all .1s ease-in;
+    color:white;
 }
 .footer__social:hover {
     background-color: var(--primery-color);
