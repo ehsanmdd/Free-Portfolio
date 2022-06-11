@@ -1,3 +1,8 @@
+@media (min-width: 1400px) {
+    .container {
+        width: 1250px;
+    }
+}
 @media screen and (max-width: 1400px) {
     .home__photo {
        width: 45rem; 
@@ -82,6 +87,12 @@
         font-size: 1.6rem;
         margin: 0;
     }
+    .contactus__map {
+        display: none;
+    }
+    .contact {
+        margin-right: auto;
+    }
 
 }
 @media screen and (max-width: 768px) {
@@ -139,6 +150,15 @@
     .service_icon {
         width: 6rem;
     }
+    .footer__wrapper {
+        flex-direction: column;
+    }
+    .footer__copy-right {
+        text-align: center;
+    }
+    .about__content {
+        padding: 2rem;
+    }
 }
 @media screen and (max-width: 576px) {
     .home__title {
@@ -168,6 +188,14 @@
     }
     .service__wave {
         top: 17rem;
+    }
+    .footer__wrapper {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 610px) {
+    .contact {
+        padding: 4.5rem 2rem;
     }
 }
 @media screen and (max-width: 300px) {
