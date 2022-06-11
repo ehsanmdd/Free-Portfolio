@@ -181,6 +181,9 @@ body {
 .menu__item {
     margin-right: 4rem;
 }
+.menu__item--active {
+    color: var(--primery-color);
+}
 
 .menu__item :last-child {
     margin-right: 0;
@@ -320,7 +323,7 @@ body {
  */
 
 .aboutUs {
-    margin-top: 15rem;
+    margin-top: 8rem;
 }
 
 .about {
@@ -409,7 +412,7 @@ body {
 
 
 .services {
-    margin-top: 15rem;
+    margin-top: 8rem;
 }
 
 .service {
@@ -424,26 +427,32 @@ body {
 
 .service-perple {
     background-color: #8540FF;
+    box-shadow: 0 0 2rem rgb(133, 64, 255, 0.5);
 }
 
 .service-yellow {
     background-color: #FFC50C;
+    box-shadow: 0 0 2rem rgb(255, 197, 12, 0.5);
 }
 
 .service-pink {
     background-color: #EC407A;
+    box-shadow: 0 0 2rem rgb(236, 64, 122, 0.5);
 }
 
 .service-orange {
     background-color: #FF6331;
+    box-shadow: 0 0 2rem rgb(255, 99, 49, 0.5);
 }
 
 .service-blue {
     background-color: #13B6FF;
+    box-shadow: 0 0 2rem rgb(19, 182, 255, 0.5);
 }
 
 .service-green {
     background-color: #49AF46;
+    box-shadow: 0 0 2rem rgba(73, 175, 70, 0.5);
 }
 
 .service__title {
@@ -468,7 +477,7 @@ body {
  */
 
 .resume {
-    margin-top: 20rem;
+    margin-top: 8rem;
     box-shadow: 0 0 4rem rgba(10, 189, 171, 0.2);
     padding: 8rem 0;
     transform: skewY(-6deg);
@@ -523,7 +532,7 @@ body {
     border-radius: 2rem;
     background-color: var(--primery-color);
     z-index: -1;
-    transition: all 0.2s ease-in;
+    transition: all .2s ease-in;
 }
 
 .resume-list__item--active {
@@ -544,7 +553,6 @@ body {
     font-family: "Poppins Bold";
     font-size: 1.8rem;
     margin-left: 2.5rem;
-    transition: all 0.2s ease-in;
 }
 
 
@@ -554,7 +562,7 @@ body {
     padding-left: 3rem;
     height: 0;
     opacity: 0;
-    transition: all 0.5s ease-out;
+    transition: all 120ms ease-in;
 }
 
 .resume-content--show {
@@ -625,7 +633,7 @@ body {
  */
 
 .portfolio {
-    margin-top: 20rem;
+    margin-top: 8rem;
 }
 
 .porfolio-list {
@@ -694,7 +702,7 @@ body {
 
  */
 .pricing {
-    margin-top: 20rem;
+    margin-top: 8rem;
     box-shadow: 0 0 4rem rgba(10, 189, 171, 0.3);
     padding: 8rem 0 15rem 0;
     transform: skewY(-6deg);
