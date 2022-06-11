@@ -14,6 +14,11 @@
     --app-bg-color:                     #FFFFFF;
     --section-bg-color:                 #FFFFFF;
 }
+:root.dark-theme {
+    --text-color:                       #95A5C6;
+    --app-bg-color:                     #161D26;
+    --section-bg-color:                 #1F2935;
+}
 
 
  /*
@@ -878,6 +883,27 @@ body {
     background-color: var(--primery-color);
 }
 .footer__social svg {
+    height: 3rem;
+    fill: white;
+}
+
+/*
+
+- Dark Theme section -
+
+ */
+.change-theme {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    background-color: var(--app-color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .1s ease-in;
+    cursor: pointer;
+}
+.change-theme__icon {
     height: 3rem;
     fill: white;
 }
