@@ -274,16 +274,6 @@ body {
 
 /*
 
-- Main -
-
- */
-
-.main {
-    /* padding-top: 12rem; */
-}
-
-/*
-
 - Home -
 
  */
@@ -517,6 +507,7 @@ body {
     justify-content: center;
     min-height: 45rem;
     margin-right: 2rem;
+    border-radius: .5rem;
 }
 
 .resume-list::before {
@@ -759,6 +750,7 @@ body {
 .package__body {
     padding: 3rem 0;
     background-color: var(--app-bg-color);
+    border-radius: .5rem;
 }
 .package-options {
     width: 18rem;
