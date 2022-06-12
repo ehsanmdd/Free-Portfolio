@@ -8,4 +8,4 @@ check the grid stylesheet.
 >.
 
 
-![Website Preview](https://i.ibb.co/bb6fts4/Persoanl-Website.png)
+![Website Preview](https://8pic.ir/uploads/Persoanl-Website.png)
