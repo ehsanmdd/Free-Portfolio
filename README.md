@@ -8,4 +8,4 @@ check the grid stylesheet.
 >.
 
 
-![Persoanl-Website.png](https://i.postimg.cc/TYxdfjpJ/Persoanl-Website.png)
+![Preview Portfolio Website](/Portfolio.png)
